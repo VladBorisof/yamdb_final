@@ -1,6 +1,7 @@
 # Описание YaMDb
 ![](https://img.shields.io/badge/YaMDB-black?style=for-the-badge&logo={LOGO}&logoColor=white)
-![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+
+![example workflow](https://github.com/VladBorisof/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 
 Проект YaMDb собирает отзывы (Review) пользователей на произведения (Titles). Произведения делятся на категории: «Книги», «Фильмы», «Музыка». Список категорий (Category) может быть расширен администратором (например, можно добавить категорию «Изобразительное искусство» или «Ювелирка»).
