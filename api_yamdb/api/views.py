@@ -1,3 +1,11 @@
+from api.filters import TitleFilter
+from api.mixins import ListCreateDestroyViewSet
+from api.permissions import (IsAdminOrReadOnly, IsRoleAdmin,
+                             ReviewCommentCustomPermission)
+from api.serializers import (CategorySerializer, CommentSerializer,
+                             GenreSerializer, ReviewSerializer,
+                             TitleGetSerializer, TitlePostSerializer,
+                             UserEditSerializer, UserSerializer)
 from django.db.models import Avg
 from django.db.utils import IntegrityError
 from django_filters.rest_framework import DjangoFilterBackend
@@ -9,17 +17,8 @@ from rest_framework.pagination import (LimitOffsetPagination,
                                        PageNumberPagination)
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
-
 from reviews.models import Category, Comment, Genre, Review, Title
 from users.models import User
-from .filters import TitleFilter
-from .mixins import ListCreateDestroyViewSet
-from .permissions import (IsAdminOrReadOnly, IsRoleAdmin,
-                          ReviewCommentCustomPermission)
-from .serializers import (CategorySerializer, CommentSerializer,
-                          GenreSerializer, ReviewSerializer,
-                          TitleGetSerializer, TitlePostSerializer,
-                          UserEditSerializer, UserSerializer)
 
 
 class CategoryViewSet(ListCreateDestroyViewSet):
