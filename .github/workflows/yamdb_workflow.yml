@@ -57,8 +57,6 @@ jobs:
         username: ${{ secrets.USER }}
         key: ${{ secrets.SSH_KEY }}
 #        passphrase: ${{ secrets.PASSPHRASE }} # Если ваш ssh-ключ защищён фразой-паролем
-        run: |
-          cd infra/
         script: |
           sudo docker-compose stop
           sudo docker-compose rm web
